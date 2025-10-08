@@ -1,0 +1,9 @@
+:root{
+    --primary-background : #ff9800;
+    --primary-color : #fff;
+    --primary-background-hover:#e65100;
+    --secondary-background : #607d8b;
+    --secondary-background-hover: #263238;
+    --max-width-page : 900px;
+    --padding-page : 2rem;
+}   

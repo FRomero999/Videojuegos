@@ -1,8 +1,43 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import "theme.css";
+@import "normalize.css";
+@import "components.css";
+
+
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+
+  *{
+    max-width: var(--max-width-page);
+    outline: solid;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
 }
 
-a {
-  color: #00B7FF;
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
