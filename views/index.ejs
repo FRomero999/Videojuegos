@@ -1,126 +1,251 @@
 <!DOCTYPE html>
 <html lang="es">
-<head> 
-  <title>Bilioteca de Videojuegos - Login</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="Este sitio web rtata sobre videojuegos">
-  <meta name="keywords" content="videojuegos,colecciones,games">
-  <meta name="author" content="Francisco Romero"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <title>Bilioteca de Videojuegos - Login</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Este sitio web rtata sobre videojuegos" />
+    <meta name="keywords" content="videojuegos,colecciones,games" />
+    <meta name="author" content="Francisco Romero" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  
-  <link rel="canonical" href="videojuegos.com">
+    <link
+      rel="alternate"
+      href="atom.xml"
+      type="application/atom+xml"
+      title="Atom"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-  <style>
-    h1{ font-size: 3rem; }
-  </style>
-  
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  
-</head>
+    <link rel="canonical" href="videojuegos.com" />
 
-<body>
+    <style>
+      h1 {
+        font-size: 3rem;
+      }
+    </style>
 
-<nav id="mainmenu">
-  <ul>   
-    <li><a href="#">Colección</a></li>
-    <li>
-      <a href="#">Explorar</a>
-      <ul class="submenu">
-        <li>Nintendo Switch</li>
-        <li>XBox</li>
-        <li>Playstation 5</li>
-        <li>Evercade</li>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <nav id="mainmenu">
+      <ul>
+        <li><a href="#">Colección</a></li>
+        <li>
+          <a href="#">Explorar</a>
+          <ul class="submenu">
+            <li>Nintendo Switch</li>
+            <li>XBox</li>
+            <li>Playstation 5</li>
+            <li>Evercade</li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Contacto</a>
+          <div class="megamenu">
+            <h3>Datos de Contacto</h3>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:francisco.romero@email.com"
+                >francisco.romero@email.com</a
+              >
+            </p>
+            <p>
+              <strong>Twitter:</strong>
+              <a href="https://twitter.com/franciscoromero" target="_blank"
+                >@franciscoromero</a
+              >
+            </p>
+            <p>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/franciscoromero" target="_blank"
+                >github.com/franciscoromero</a
+              >
+            </p>
+          </div>
+        </li>
       </ul>
-    </li>
-    <li>
-      <a href="#">Contacto</a>
-      <div class="megamenu">
-        <h3>Datos de Contacto</h3>
-        <p><strong>Email:</strong> <a href="mailto:francisco.romero@email.com">francisco.romero@email.com</a></p>
-        <p><strong>Twitter:</strong> <a href="https://twitter.com/franciscoromero" target="_blank">@franciscoromero</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/franciscoromero" target="_blank">github.com/franciscoromero</a></p>
-      </div>
-
-    </li>
-  </ul>
-  <a href="#"><img class="logo" src="/images/videogame-console.png" alt=""></a>
-  <ul>
-    <li>
-      <a href="#" id="login-menu">Login</a>
-      <div class="offcanvas" id="login-offcanvas" >
-        <h2>Iniciar Sesión</h2>
-        <form>
-          <div>
-            <label for="login-username">Usuario:</label><br>
-            <input type="text" id="login-username" name="username" required>
+      <a href="#"
+        ><img class="logo" src="/images/videogame-console.png" alt=""
+      /></a>
+      <ul>
+        <li>
+          <a href="#" id="login-menu">Login</a>
+          <div class="offcanvas" id="login-offcanvas">
+            <h2>Iniciar Sesión</h2>
+            <form>
+              <div>
+                <label for="login-username">Usuario:</label><br />
+                <input
+                  type="text"
+                  id="login-username"
+                  name="username"
+                  required
+                />
+              </div>
+              <div>
+                <label for="login-password">Contraseña:</label><br />
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  required
+                />
+              </div>
+              <button type="submit" class="btn">Entrar</button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="cancel-button"
+              >
+                Cancelar
+              </button>
+            </form>
           </div>
-          <div>
-            <label for="login-password">Contraseña:</label><br>
-            <input type="password" id="login-password" name="password" required>
-          </div>
-          <button type="submit" class="btn">Entrar</button>
-          <button type="button" class="btn btn-secondary" id="cancel-button">Cancelar</button>
-        </form>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="inner">
+        <h1>Bienvenido a la Biblioteca de Videojuegos</h1>
+        <p>
+          Explora, colecciona y comparte tus videojuegos favoritos en un solo
+          lugar.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn">Iniciar Sesión</a>
+          <a href="#" class="btn btn-secondary">Registrarse</a>
+        </div>
       </div>
-    </li>
-  </ul>
-</nav>
+      <iframe
+        src="https://www.youtube.com/embed/37Jjb9XuQx0?si=5rP4nDMqShiDOtgX&autoplay=1&mute=1&controls=0&showinfo=0"
+      ></iframe>
+    </section>
 
-<section class="hero">
-  <h1>Bienvenido a la Biblioteca de Videojuegos</h1>
-  <p>Explora, colecciona y comparte tus videojuegos favoritos en un solo lugar.</p>
-  <div class="hero-buttons">
-    <a href="#" class="btn">Iniciar Sesión</a>
-    <a href="#" class="btn btn-secondary">Registrarse</a>
-  </div>
-</section>
+    <section class="boxed">
+      <h2>Lo más visitado</h2>
+      <div class="slider">
+        <div class="inner">
+          <div class="slide">
+            <img src="images\supermarioworld.png" alt="" />
+            <p>Super Mario World para Supernintendo</p>
+          </div>
+          <div class="slide">
+            <img src="images\zelda.jpg" alt="" />
+            <p>The legend of zelda: a link to past</p>
+          </div>
+          <div class="slide">
+            <img src="images\sonic.png" alt="" />
+            <p>Sonic the Hedgeogh, para Sega MegaDrive</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section>
-  <h2>Slider</h2>
-  <div class="slider">
-    <div class="inner">
-      <div class="slide"><img src="images\pexels-abner-velazquez-1035709527-34330494.jpg" alt=""></div>
-      <div class="slide"><img src="images\pexels-kaip-534757.jpg" alt=""></div>
-      <div class="slide"><img src="images\pexels-nout-gons-80280-378570.jpg" alt=""></div>
-    </div>
-  </div>
-</section>
+    <section class="boxed cards">
+      <h2>Últimos añadidos</h2>
+      <div class="inner">
+        <div class="flip-card">
+          <div class="inner">
+            <div class="front">
+              <img src="/images/covers/sonic.jpg" alt="" />
+            </div>
+            <div class="back">Sonic el erizo</div>
+          </div>
+        </div>
+        <div class="flip-card flipped">
+          <div class="inner">
+            <div class="front">
+              <img src="/images/covers/sonic.jpg" alt="" />
+            </div>
+            <div class="back">Sonic el erizo</div>
+          </div>
+        </div>
 
-<section>
-  <h2>Ejemplo de acordeon</h2>
-  <div class="acordeon">
-    <div class="elemento show">
-      <h3>¿Qué es la Biblioteca de Videojuegos?</h3>
-      <div>Es una plataforma para organizar y descubrir videojuegos. Guarda tu colección, marca tus títulos pendientes y encuentra recomendaciones personalizadas según tus gustos.</div>
-    </div>
-    <div class="elemento">
-      <h3>Cómo funciona la colección</h3>
-      <div>Crea una cuenta, añade juegos buscándolos por título o plataforma, aplica etiquetas como "completado", "en curso" o "pendiente" y organiza listas de deseos para futuras compras.</div>
-    </div>
-    <div class="elemento">
-      <h3>Comunidad y reseñas</h3>
-      <div>Comparte reseñas y valoraciones, sigue a otros coleccionistas y participa en debates sobre lanzamientos, ofertas y gemas ocultas del catálogo.</div>
-    </div>
-    <div class="elemento">
-      <h3>Compatibilidad y plataformas</h3>
-      <div>Soportamos Nintendo Switch, PlayStation 5, Xbox Series, PC y sistemas retro como NES, SNES y Mega Drive. Filtra por plataforma, género, año y más.</div>
-    </div>
-  </div>
-  
-</section>
+        <div class="flip-card flipped">
+          <div class="inner">
+            <div class="front">
+              <img src="/images/covers/sonic.jpg" alt="" />
+            </div>
+            <div class="back">Sonic el erizo</div>
+          </div>
+        </div>
+        <div class="flip-card flipped">
+          <div class="inner">
+            <div class="front">
+              <img src="/images/covers/sonic.jpg" alt="" />
+            </div>
+            <div class="back">Sonic el erizo</div>
+          </div>
+        </div>
 
-<footer id="pie">
-    <p>© 2024 Francisco Romero | Contacto: <a href="mailto:francisco.romero@email.com">francisco.romero@email.com</a></p>
-    <p>Sígueme en 
-      <a href="https://twitter.com/franciscoromero" target="_blank">Twitter</a> | 
-      <a href="https://github.com/franciscoromero" target="_blank">GitHub</a>
-    </p>
-</footer>
+        <div class="flip-card flipped">
+          <div class="inner">
+            <div class="front">
+              <img src="/images/covers/sonic.jpg" alt="" />
+            </div>
+            <div class="back">Sonic el erizo</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <script src="/javascripts/app.js"></script>
-</body>
+    <section class="boxed">
+      <h2>Preguntas comunes</h2>
+      <div class="acordeon">
+        <div class="elemento show">
+          <h3>¿Qué es la Biblioteca de Videojuegos?</h3>
+          <div>
+            Es una plataforma para organizar y descubrir videojuegos. Guarda tu
+            colección, marca tus títulos pendientes y encuentra recomendaciones
+            personalizadas según tus gustos.
+          </div>
+        </div>
+        <div class="elemento">
+          <h3>Cómo funciona la colección</h3>
+          <div>
+            Crea una cuenta, añade juegos buscándolos por título o plataforma,
+            aplica etiquetas como "completado", "en curso" o "pendiente" y
+            organiza listas de deseos para futuras compras.
+          </div>
+        </div>
+        <div class="elemento">
+          <h3>Comunidad y reseñas</h3>
+          <div>
+            Comparte reseñas y valoraciones, sigue a otros coleccionistas y
+            participa en debates sobre lanzamientos, ofertas y gemas ocultas del
+            catálogo.
+          </div>
+        </div>
+        <div class="elemento">
+          <h3>Compatibilidad y plataformas</h3>
+          <div>
+            Soportamos Nintendo Switch, PlayStation 5, Xbox Series, PC y
+            sistemas retro como NES, SNES y Mega Drive. Filtra por plataforma,
+            género, año y más.
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <footer id="pie">
+      <p>
+        © 2024 Francisco Romero | Contacto:
+        <a href="mailto:francisco.romero@email.com"
+          >francisco.romero@email.com</a
+        >
+      </p>
+      <p>
+        Sígueme en
+        <a href="https://twitter.com/franciscoromero" target="_blank"
+          >Twitter</a
+        >
+        |
+        <a href="https://github.com/franciscoromero" target="_blank">GitHub</a>
+      </p>
+    </footer>
+
+    <script src="/javascripts/app.js"></script>
+  </body>
 </html>

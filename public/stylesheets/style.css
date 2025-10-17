@@ -7,18 +7,35 @@
 .hero {
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(120deg, #232526 0%, #414345 100%);
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   padding: 0;
+  position:relative;
+  overflow:hidden;
 
-  *{
-    max-width: var(--max-width-page);
-    outline: solid;
+  div.inner{
+    position:absolute;  
+    background: linear-gradient(120deg, #11121270 0%, #1d8dffa6 100%);
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    *{
+      max-width: var(--max-width-page);
+    }
+
+  }
+
+  iframe{
+    position:absolute;
+    width:100%;
+    height:calc(110vw / 2);
+    z-index:-1;
+    object-fit:cover;
+
   }
 
   h1 {
@@ -40,4 +57,31 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+section{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem;
+  margin:0 auto;
+  padding:0;
+
+  h2{
+    font-size:3rem;
+  }
+}
+
+section.boxed>*{
+  max-width: var(--max-width-page);
+}
+
+
+section.cards{
+  div.inner{
+    display:flex;
+    gap:3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
