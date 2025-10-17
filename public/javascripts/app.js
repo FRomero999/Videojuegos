@@ -13,3 +13,14 @@ if(menuLogin && menuOffCanvas && botonCancelarLogin){
     })
 }
 
+const itemsAcordeonH3 = document.querySelectorAll("div.acordeon h3")
+const itemsAcordeon = document.querySelectorAll("div.acordeon div.elemento")
+
+itemsAcordeonH3.forEach( (el)=>{
+    el.addEventListener("click",(e)=>{
+        itemsAcordeon.forEach( (el)=> el.classList.remove("show"))
+        e.target.parentElement.classList.toggle("show")
+    })
+})
+
+
