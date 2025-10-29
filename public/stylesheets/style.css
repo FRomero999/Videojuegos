@@ -2,8 +2,6 @@
 @import "normalize.css";
 @import "components.css";
 
-
-
 .hero {
   min-height: 100vh;
   width: 100%;
@@ -93,6 +91,7 @@ section.cards{
   margin:3rem auto;
   rotate: 2deg;
 
+
   h2{rotate:-2deg;}
 
   div.inner{
@@ -103,3 +102,18 @@ section.cards{
     justify-content: center;
   }
 }
+
+
+section.gallery div.inner{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.tienda div.inner{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:1rem;
+}
+

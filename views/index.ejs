@@ -124,27 +124,107 @@
       ></iframe-->
     </section>
 
+    <section class="tienda">
+      <h2>Tienda online</h2>
+      <div class="inner">
+
+        <% productos.forEach(element => { %>
+          <a href="/producto/<%= element.id %>">
+          <div class="card">
+            <img src="<%= element.imagen %>" alt="">
+            <h3><%= element.titulo %></h3>
+            <span class="precio"><%= element.precio %>€</span>
+            <p><%= element.descripcion %></p>
+            <div>
+              <% element.categoria.forEach(cat => { %>
+                <span class="category"><%= cat %></span>               
+              <% }) %>
+            </div>
+          </div>    
+          </a>     
+        <% }) %>
+
+      </div>  
+    </section>
+
+
+    <section class="boxed gallery">
+      <h2>Galeria</h2>
+      <div class="inner">
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+        <figure class="item">
+          <picture>
+            <source srcset="/images/sonic.png" media="(min-width: 900px)" type="image/png">
+            <img src="/images/supermarioworld.png" alt="" loading="lazy"/>
+          </picture>
+          <figcaption>SuperMarioWorld de SuperNes</figcaption>
+        </figure>
+      </div>
+    </section>    
+
+
     <section class="boxed">
       <h2>Lo más visitado</h2>
       <div class="slider">
         <div class="inner">
           <div class="slide">
-            <img src="images\supermarioworld.png" alt="" />
+            <img src="/images/supermarioworld.png" alt="" />
             <p>Super Mario World para Supernintendo</p>
           </div>
           <div class="slide">
-            <img src="images\zelda.jpg" alt="" />
+            <img src="/images/zelda.jpg" alt="" />
             <p>The legend of zelda: a link to past</p>
           </div>
           <div class="slide">
-            <img src="images\sonic.png" alt="" />
+            <img src="/images/sonic.png" alt="" />
             <p>Sonic the Hedgeogh, para Sega MegaDrive</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class=" cards">
+    <section class="boxed cards">
       <h2>Últimos añadidos</h2>
       <div class="inner">
         <div class="flip-card">
