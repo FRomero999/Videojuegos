@@ -23,4 +23,10 @@ itemsAcordeonH3.forEach( (el)=>{
     })
 })
 
+document.querySelector("#btnRegister")?.addEventListener("click", ()=>{
+    console.log("Mostrar dialogo")
+    document.querySelector("#register")?.showModal()
+    
+});
+
 
