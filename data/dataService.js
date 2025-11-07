@@ -90,6 +90,7 @@ function findAllProductosLessThan(precio) {
 }
 
 function findProductoById(id) {
+    
     return productosTienda.filter((e) => { return (e.id == id) })[0]
 }
 

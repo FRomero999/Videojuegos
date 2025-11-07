@@ -10,8 +10,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/producto/:id",function(req,res,next){
-  const item = ( dataService.findProductoById( req.params.id))
-  res.render('item',{ producto : item })
+   const item = ( dataService.findProductoById( req.params.id))
+  res.json(producto)
+});
+
+router.get("/admin",function(req,res){
+  res.render("admin",{})
 });
 
 module.exports = router;

@@ -30,3 +30,11 @@ document.querySelector("#btnRegister")?.addEventListener("click", ()=>{
 });
 
 
+const dialogo = document.querySelector("dialog")
+dialogo?.addEventListener("click",(ev)=>{
+    if(ev.target === dialogo){
+        dialogo.close()
+    }
+});
+
+

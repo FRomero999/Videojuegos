@@ -30,6 +30,14 @@
   <body>
 
     <style>
+      dialog{
+        position:fixed;
+        padding:0;
+        >*{
+          padding:1rem;
+        }
+      }
+
       dialog::backdrop {
         background-color: rgba(218, 76, 76, 0.616);
         backdrop-filter: blur(3px);
@@ -350,23 +358,9 @@
         </div>
       </div>
     </section>
-
-    <footer id="pie">
-      <p>
-        © 2024 Francisco Romero | Contacto:
-        <a href="mailto:francisco.romero@email.com"
-          >francisco.romero@email.com</a
-        >
-      </p>
-      <p>
-        Sígueme en
-        <a href="https://twitter.com/franciscoromero" target="_blank"
-          >Twitter</a
-        >
-        |
-        <a href="https://github.com/franciscoromero" target="_blank">GitHub</a>
-      </p>
-    </footer>
+    
+    
+    <%- include("partials/footer") %> 
 
     <script src="/javascripts/app.js"></script>
   </body>
