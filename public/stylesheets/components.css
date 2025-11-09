@@ -376,6 +376,10 @@ figure.item{
 
   /* Tarjetas */
 
+  a:has(div.card){
+    text-decoration: none   ;
+  }
+
   div.card{
     outline:none;
     border: solid 1px black;

@@ -10,8 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get("/producto/:id",function(req,res,next){
-   const item = ( dataService.findProductoById( req.params.id))
-  res.json(producto)
+  const item = ( dataService.findProductoById( req.params.id))
+  console.log(item)
+  res.render('item',{ item: item })
 });
 
 router.get("/admin",function(req,res){
