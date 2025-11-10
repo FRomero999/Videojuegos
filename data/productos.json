@@ -248,6 +248,131 @@
                 "texto": "Obra maestra narrativa. La historia es cruda, emotiva y te hace reflexionar. Los gráficos en PS4 son increíbles, el sonido es inmersivo y la jugabilidad está pulida al máximo. Una experiencia que no olvidaré."
             }
         ]
+    },
+    {
+        "id": 11,
+        "imagen": "https://picsum.photos/id/1031/600/800",
+        "titulo": "Super Mario Odyssey (Switch)",
+        "descripcion": "Acompaña a Mario en una travesía mundial llena de sorpresas, plataformas innovadoras y la magia de Nintendo.",
+        "categoria": ["plataformas", "aventura", "nintendo"],
+        "precio": 49.99,
+        "comentarios": [
+            {
+                "autor": "Pepe_Nintendo",
+                "valoracion": 5,
+                "texto": "Imaginativo y divertido de principio a fin. El mejor Mario 3D en años. Ideal para todas las edades."
+            },
+            {
+                "autor": "MartaG",
+                "valoracion": 4,
+                "texto": "Los niveles son coloridos y variados. El sistema de capturar enemigos con Cappy es brillante."
+            },
+            {
+                "autor": "Samuel_Z",
+                "valoracion": 5,
+                "texto": "Repleto de secretos y puzzles. La banda sonora es pegadiza. Lo recomiendo mucho."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "imagen": "https://picsum.photos/id/1042/600/800",
+        "titulo": "Horizon Zero Dawn (PS4)",
+        "descripcion": "Descubre un mundo posapocalíptico dominado por máquinas en esta épica aventura de acción con Aloy.",
+        "categoria": ["acción", "aventura", "playstation"],
+        "precio": 27.99,
+        "comentarios": [
+            {
+                "autor": "Carla_HZD",
+                "valoracion": 5,
+                "texto": "El universo es increíblemente original y visualmente impresionante. Aloy es un gran personaje principal."
+            },
+            {
+                "autor": "Victor_ME",
+                "valoracion": 4,
+                "texto": "Las batallas con robots son intensas y estratégicas. Algunas misiones secundarias repetitivas."
+            },
+            {
+                "autor": "Elena_T",
+                "valoracion": 5,
+                "texto": "La historia engancha y el mapa está lleno de cosas por hacer. Muy recomendable."
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "imagen": "https://picsum.photos/id/1043/600/800",
+        "titulo": "Minecraft (Switch)",
+        "descripcion": "Construye, explora y sobrevive en un mundo de bloques con posibilidades infinitas.",
+        "categoria": ["sandbox", "creativo", "nintendo"],
+        "precio": 23.50,
+        "comentarios": [
+            {
+                "autor": "Alex_MC",
+                "valoracion": 5,
+                "texto": "Perfecto para dejar volar la imaginación. Adictivo en modo creativo y desafiante en supervivencia."
+            },
+            {
+                "autor": "NuriaW",
+                "valoracion": 4,
+                "texto": "Ideal para jugar en familia. Los servidores multijugador son geniales."
+            },
+            {
+                "autor": "David14",
+                "valoracion": 5,
+                "texto": "Nunca me canso de Minecraft. Siempre hay algo nuevo que construir."
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "imagen": "https://picsum.photos/id/1044/600/800",
+        "titulo": "Elden Ring (PS5)",
+        "descripcion": "Explora las Tierras Intermedias en este desafiante RPG de mundo abierto de los creadores de Dark Souls.",
+        "categoria": ["rpg", "acción", "fantasía"],
+        "precio": 59.99,
+        "comentarios": [
+            {
+                "autor": "Gamer_Luis",
+                "valoracion": 5,
+                "texto": "Difícil pero gratificante. El diseño del mundo es asombroso y la libertad es total."
+            },
+            {
+                "autor": "Sara_DS",
+                "valoracion": 4,
+                "texto": "La ambientación es impresionante y los jefes épicos. Puede ser frustrante para algunos."
+            },
+            {
+                "autor": "FedeRing",
+                "valoracion": 5,
+                "texto": "El mejor juego de la generación actual. De los pocos que me han enganchado tanto."
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "imagen": "https://picsum.photos/id/1045/600/800",
+        "titulo": "Stardew Valley (Switch)",
+        "descripcion": "Crea la granja de tus sueños, haz amigos en el pueblo y vive una vida tranquila lejos de la ciudad.",
+        "categoria": ["simulación", "indie", "relajante"],
+        "precio": 15.99,
+        "comentarios": [
+            {
+                "autor": "Marina_SD",
+                "valoracion": 5,
+                "texto": "Encantador y relajante, ideal para desconectar. La música es preciosa y la jugabilidad adictiva."
+            },
+            {
+                "autor": "Antonio_Farm",
+                "valoracion": 4,
+                "texto": "Gran juego indie. Cultivar y relacionarse con los aldeanos es muy entretenido."
+            },
+            {
+                "autor": "PabloH",
+                "valoracion": 5,
+                "texto": "Llevo más de 200 horas jugadas y todavía me sigo divirtiendo. Recomendadísimo!"
+            }
+        ]
     }
 ]
 
