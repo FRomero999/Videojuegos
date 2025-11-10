@@ -60,7 +60,7 @@
                             <div class="review-header">
                                 <span class="review-user"><%=comentario.autor %></span>
                                 <span class="review-rating">
-                                    <% for(let i=0; i<comentario.valoracion; i++){ %>★<% } %>
+                                    <% for(let i=0; i<(5-comentario.valoracion); i++){ %>☆<% } %><% for(let i=0; i<comentario.valoracion; i++){ %>★<% } %>
                                 </span>
                             </div>
                             <p class="review-text"><%=comentario.texto %></p>

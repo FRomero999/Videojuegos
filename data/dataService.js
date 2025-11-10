@@ -5,6 +5,8 @@ const productosTienda = JSON.parse(
     fs.readFileSync(path.join(__dirname, 'productos.json'), 'utf8')
 );
 
+
+
 function saveProductosTienda() {
     fs.writeFileSync(
         path.join(__dirname, 'productos.json'),
@@ -13,7 +15,7 @@ function saveProductosTienda() {
     );
 }
 
-function findAllProductos() {
+function findAllProductos() {    
     return productosTienda;
 }
 
