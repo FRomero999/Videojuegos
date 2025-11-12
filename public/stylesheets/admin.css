@@ -35,3 +35,64 @@ header{
     background-color: var(--primary-background);
 }
 
+/*  Tabla con listado de juegos */
+
+#admin table{
+
+    border-collapse: collapse;
+    border:solid 4px ;
+
+
+    caption{
+        font-size:2rem;
+        margin-bottom:1rem;
+    }
+
+    th,td{
+        font-size:1.2rem;
+        border:solid 1px;
+        padding:1rem;
+    }
+
+    tbody tr:nth-child(2n+1){
+        background-color:rgba(31, 192, 192, 0.299);
+    }
+    tbody tr:nth-child(2n){
+        background-color:rgba(31, 161, 161, 0.299);
+    }
+
+    tbody tr:hover{
+        background-color: blueviolet;
+        color:white;
+    }
+
+    tbody td:hover{
+        background-color: rgb(168, 149, 186);
+        color:white;
+    }
+
+    .first-col{
+        background-color:aquamarine;
+    }
+
+}
+
+table + div.pagination{
+    display:none;
+    justify-content: center;
+    gap:1rem;
+    button{
+        padding:0.5rem;
+    }
+}
+
+#admin table.page{
+    height: 400px;
+    display:block;
+    overflow-y:scroll;
+
+}
+
+#admin:has(table.page) table + div.pagination{
+    display:flex;
+}
