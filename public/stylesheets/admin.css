@@ -15,8 +15,43 @@ div#container{
     min-height: 100vh;
 }
 
-aside{
-    background-color:black;
+aside {
+    background: var(--secondary-background-glass);
+    color: var(--primary-color);
+    width: 20rem;
+    margin: 0;
+
+    h2 {
+        color: var(--primary-color);
+        margin: 1rem;
+        font-size: 1.4rem;
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    display: block;
+                    padding: 1rem;
+                    
+                    color: var(--primary-color);
+                    background: var(--secondary-background-hover);
+                    text-decoration: none;
+                    font-weight: 500;
+                    transition: background 0.2s, color 0.2s;
+
+                    &:hover {
+                        background: var(--primary-color);
+                        color: var(--secondary-background-hover);
+                    }
+                }
+            }
+        }
+    }
 }
 
 footer{
@@ -73,6 +108,19 @@ header{
 
     .first-col{
         background-color:aquamarine;
+    }
+
+    .btn{
+        text-decoration:none;
+        padding:0.3em 0.7em;
+        border-radius:6px;
+        background-color: var(--primary-background);
+        color:var(    --primary-color);
+        display:inline-block;
+        
+        &.btn-borrar{
+            background-color:red;
+        }
     }
 
 }
