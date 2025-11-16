@@ -28,9 +28,27 @@ function findProductoById(id) {
 }
 
 
+function deleteProductoById(id) {
+    const originalLength = productosTienda.length;
+    const nuevaLista = productosTienda.filter(e => e.id != id);
+    // Primero, comprobamos si la nueva lista de productos tiene una longitud diferente a la lista original.
+    // Esto significa que se eliminó un producto.
+    if (nuevaLista.length !== originalLength) {
+        // Vaciamos el array productosTienda actual 
+        // y añadimos todos los elementos de la nueva lista al array vaciado.
+        productosTienda.length = 0;
+        productosTienda.push(...nuevaLista);
+        saveProductosTienda();
+        return true;
+    }
+    return false;
+}
+
+
 
 module.exports = {
     findAllProductos,
     findAllProductosLessThan,
-    findProductoById
+    findProductoById,
+    deleteProductoById
 }
