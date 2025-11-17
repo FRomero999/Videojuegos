@@ -41,7 +41,6 @@ router.get("/admin/producto/:pid",function(req,res,next){
 
 
 router.post("/admin/producto/delete",function(req,res,next){
-    
   const id = req.body.id
   dataService.deleteProductoById(id)
   res.redirect("/admin")  
