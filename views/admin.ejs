@@ -32,98 +32,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>12</td>
-                        <td>Horizon Zero Dawn (PS4)</td>
-                        <td>27.99</td>
-                        <td>acción, aventura, playstation</td>
-                        <td>
-                            <a href="/producto/12" class="btn btn-ver">👁 Ver</a>
-                            <a href="/admin/productos/12?delete" class="btn btn-borrar">🗑 Borrar</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>Minecraft (Switch)</td>
-                        <td>23.50</td>
-                        <td>sandbox, creativo, nintendo</td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>Elden Ring (PS5)</td>
-                        <td>59.99</td>
-                        <td>rpg, acción, fantasía</td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>Stardew Valley (Switch)</td>
-                        <td>15.99</td>
-                        <td>simulación, indie, relajante</td>
-                    </tr>
-                    <tr>
-                        <td>16</td>
-                        <td>The Legend of Zelda: Breath of the Wild</td>
-                        <td>49.50</td>
-                        <td>aventura, acción, nintendo</td>
-                    </tr>
-                    <tr>
-                        <td>17</td>
-                        <td>God of War Ragnarök (PS5)</td>
-                        <td>66.79</td>
-                        <td>acción, aventura, playstation</td>
-                    </tr>
-                    <tr>
-                        <td>18</td>
-                        <td>Fire Emblem: Three Houses (Switch)</td>
-                        <td>32.45</td>
-                        <td>rpg, estrategia, nintendo</td>
-                    </tr>
-                    <tr>
-                        <td>19</td>
-                        <td>Grand Theft Auto V (PS4)</td>
-                        <td>19.90</td>
-                        <td>acción, mundo abierto, playstation</td>
-                    </tr>
-                    <tr>
-                        <td>20</td>
-                        <td>Hades (Switch)</td>
-                        <td>21.99</td>
-                        <td>roguelike, acción, indie</td>
-                    </tr>
-                    <tr>
-                        <td>21</td>
-                        <td>Final Fantasy VII Remake (PS4)</td>
-                        <td>37.80</td>
-                        <td>rpg, fantasía, playstation</td>
-                    </tr>
-                    <tr>
-                        <td>22</td>
-                        <td>Persona 5 Royal (PS4)</td>
-                        <td>29.95</td>
-                        <td>rpg, jrpg, playstation</td>
-                    </tr>
-                    <tr>
-                        <td>23</td>
-                        <td>Animal Crossing: New Horizons (Switch)</td>
-                        <td>39.99</td>
-                        <td>simulación, social, nintendo</td>
-                    </tr>
-                    <tr>
-                        <td>24</td>
-                        <td>Ratchet & Clank: Una Dimensión Aparte (PS5)</td>
-                        <td>51.00</td>
-                        <td>plataformas, acción, playstation</td>
-                    </tr>
-                    <tr>
-                        <td>25</td>
-                        <td>Super Smash Bros. Ultimate (Switch)</td>
-                        <td>42.00</td>
-                        <td>lucha, multijugador, nintendo</td>
-                    </tr>
+                    <% productos.forEach(p => { %>
+                        <tr>
+                            <td><%=p.id %></td>
+                            <td><%=p.titulo %></td>
+                            <td><%=p.precio %></td>
+                            <td>
+                                <% p.categoria.forEach(cat => { %>
+                                 <span><%=cat %></span> 
+                                <% }) %>
+                            </td>
+                            <td>
+                                <a href="/producto/<%=p.id %>" class="btn btn-ver">👁 Ver</a>
+                                <!--a href="/admin/producto/<%=p.id %>?operation=delete"" class="btn btn-borrar">🗑 Borrar</a-->
+                                <form method="post" action="/admin/producto/delete">
+                                    <input type="hidden" value="<%=p.id %>" name="id">
+                                    <button class="btn btn-borrar">🗑 Borrar</button>
+                                </form>
+                            </td>
+                        </tr>                         
+                    <% }) %>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4">Total: 4 juegos</td>
+                        <td colspan="4">Total: <%=productos.length %> juegos</td>
                     </tr>
                 </tfoot>
                 <caption>Juegos disponibles</caption>
