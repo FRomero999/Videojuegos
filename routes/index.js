@@ -7,7 +7,7 @@ const { get } = require('.');
 router.get('/', function(req, res, next) {
   const items = dataService.findAllProductosLessThan(50)
   console.log(req.query)
-  if(req.query.error) {
+  if(req.query.error!==undefined) {
     console.log("error")
     res.render('index', { productos : items, error : "El usuario no existe" });     
   } else{
@@ -29,7 +29,7 @@ router.post("/admin/login",function(req,res,next){
   if( dataService.validateUser(username,password) ){
     res.redirect("/admin")
   } else{
-    res.redirect("/?error=true")
+    res.redirect("/?error")
   }
 });
 
