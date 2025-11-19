@@ -154,8 +154,9 @@ nav#mainmenu {
     }
 
     div.offcanvas{
+        z-index: 99;
         width:12rem;
-        transition:2s;
+        transition:0.5s;
         right:calc( -12rem - 4rem);        
         top:0;
         bottom:0;

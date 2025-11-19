@@ -43,7 +43,7 @@
       <a href="#" id="login-menu">Login</a>
       <div class="offcanvas" id="login-offcanvas">
         <h2>Iniciar Sesión</h2>
-        <form>
+        <form method="post" action="/admin/login">
           <div>
             <label for="login-username">Usuario:</label><br />
             <input
@@ -70,6 +70,11 @@
           >
             Cancelar
           </button>
+          <% if (locals.error) { %>
+          <p style="background-color:red; padding:1rem;">
+              <%=locals.error %>
+          </p>
+          <% } %>
         </form>
       </div>
     </li>

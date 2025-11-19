@@ -5,6 +5,10 @@ const productosTienda = JSON.parse(
     fs.readFileSync(path.join(__dirname, 'productos.json'), 'utf8')
 );
 
+const users = JSON.parse(
+    fs.readFileSync(path.join(__dirname, 'users.json'), 'utf8')
+);
+
 
 
 function saveProductosTienda() {
@@ -44,11 +48,27 @@ function deleteProductoById(id) {
     return false;
 }
 
+function validateUser(email, password){
+    
+    let query = users.filter((e) => { return (e.username == email) })
+    
+    // result = db.query(`select * from user where username = ${email}`)
+    
+    if(query.length>0){
+        if(query[0].password==password){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+}
 
 
 module.exports = {
     findAllProductos,
     findAllProductosLessThan,
     findProductoById,
-    deleteProductoById
+    deleteProductoById,
+    validateUser
 }
