@@ -27,9 +27,11 @@ router.post("/admin/login",function(req,res,next){
   const password = req.body.password
   
   if( dataService.validateUser(username,password) ){
+    req.session.isLogged = true;
+    req.session.username = username;
     res.redirect("/admin")
   } else{
-    res.redirect("/?error")
+    res.redirect("/login")
   }
 });
 
@@ -66,7 +68,18 @@ router.post("/admin/producto/delete",function(req,res,next){
 
 
 router.get("/admin",function(req,res){
-  res.render("admin",{ productos : dataService.findAllProductos()})
+  if(req.session.isLogged){
+    res.render("admin",{ username : req.session.username, productos : dataService.findAllProductos()})
+  } else res.redirect("/login")
 });
+
+router.get("/login",function(req,res){
+  res.render("login",{})
+})
+
+router.get("/admin/logout",function(req,res){
+  req.session.destroy(()=>res.redirect("/"));
+})
+
 
 module.exports = router;

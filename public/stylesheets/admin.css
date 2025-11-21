@@ -1,6 +1,6 @@
 div#container{
     display:grid;
-    grid-template-rows: 50px 1fr auto;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: auto 1fr;
     grid-template-areas: 
         "header header"
@@ -68,6 +68,7 @@ main{
 
 header{
     background-color: var(--primary-background);
+    padding:1rem;
 }
 
 /*  Tabla con listado de juegos */

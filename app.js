@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,6 +19,19 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  name: 'sesionId', // nombre de la cookie
+  secret: 'clavedesessionmuycomplejaparaencriptarlacookie',
+  resave: false, // no reescribe si no hay cambios
+  saveUninitialized: false, // no guarda sesiones vacías
+  cookie: {
+  httpOnly: true,
+  secure: false, // true si usas HTTPS
+  maxAge: 1000 * 60 * 60 * 24 // 1 día
+  }
+  }));
+  
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

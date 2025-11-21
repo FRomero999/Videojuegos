@@ -59,7 +59,9 @@ nav#mainmenu {
     justify-content: space-between;
     align-items: center;
     background-color: var(--secondary-background);
-    position:relative;
+    position:sticky; 
+    top:0;
+    z-index:9;
 
     img.logo{
         width: var(--logo-width);
