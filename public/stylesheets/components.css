@@ -102,8 +102,12 @@ nav#mainmenu {
     li:hover ul.submenu{
         height:20rem ;
     }
+    li:hover div.megamenu{
+        max-height: 100vh;
+        padding:2rem;
+    }
 
-    ul.submenu{
+    ul.submenu, div.megamenu{
         overflow: hidden;
         height: 0;
         width:300px;
@@ -129,27 +133,23 @@ nav#mainmenu {
             color:var(--secondary-background);
             background-color: var(--secondary-background-hover);
         }
+   
+        &.megamenu{
+            box-sizing: border-box;
+            height:auto;
+            max-height: 0;
+            position:fixed;
+            transition:0.2s;
+            width:100%;
+            flex-direction: column;
+            align-items: stretch;
+            padding:0;
+            border-radius:0;
+        }
+    
 
     }
 
-    li:hover div.megamenu{
-        opacity: 0;
-    }
-    div.megamenu{
-        opacity: 0;
-        transition:0.2s;
-        left:0;       
-        right:0;
-        margin:2rem 0;
-        flex-direction: column;
-        align-items: stretch;
-        gap:0;
-        padding:2rem;
-        position:fixed;
-        background-color: var(--secondary-background-glass);
-        backdrop-filter: blur(3px);      
-        color:var(--primary-color);      
-    }
 
     div.offcanvas.show{
         right:0;

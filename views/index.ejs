@@ -19,9 +19,7 @@
     <link rel="canonical" href="videojuegos.com" />
 
     <style>
-      h1 {
-        font-size: 3rem;
-      }
+      h1 { font-size: 3rem; }
     </style>
 
     <link rel="stylesheet" href="/stylesheets/style.css" />
@@ -33,9 +31,7 @@
       dialog{
         position:fixed;
         padding:0;
-        >*{
-          padding:1rem;
-        }
+        >*{ padding:1rem; }
       }
 
       dialog::backdrop {
@@ -44,21 +40,7 @@
       }
     </style>
     <dialog id="register">
-      <form method="dialog">
-        <label for="username">Nombre de usuario:</label>
-        <input type="text" id="username" name="username" required />
-        <br />
-
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required />
-        <br />
-
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required />
-        <br />
-
-        <button type="submit">Registrarse</button>
-      </form>
+      <%- include("partials/register") %> 
     </dialog>
 
     <%- include("partials/main-menu") %>

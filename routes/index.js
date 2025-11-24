@@ -21,11 +21,8 @@ router.get("/producto/:pid",function(req,res,next){
   res.render('item',{ item: item })
 });
 
-
-
 router.get("/login",function(req,res){
   res.render("login",{})
 })
-
 
 module.exports = router;
