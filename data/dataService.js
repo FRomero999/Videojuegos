@@ -19,6 +19,11 @@ function saveProductosTienda() {
     );
 }
 
+function saveProducto(p){
+    productosTienda.push(p)
+    saveProductosTienda()
+}
+
 function findAllProductos() {    
     return productosTienda;
 }
@@ -66,6 +71,7 @@ function validateUser(email, password){
 
 
 module.exports = {
+    saveProducto,
     findAllProductos,
     findAllProductosLessThan,
     findProductoById,

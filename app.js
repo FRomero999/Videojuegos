@@ -6,7 +6,7 @@ var logger = require('morgan');
 var session = require('express-session')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var adminRouter = require('./routes/admin');
 
 var app = express();
 
@@ -16,8 +16,11 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: false }));
+
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
@@ -28,13 +31,14 @@ app.use(session({
   cookie: {
   httpOnly: true,
   secure: false, // true si usas HTTPS
-  maxAge: 1000 * 60 * 60 * 24 // 1 día
+  maxAge: 1000 * 60 * 1 * 1 // 1 día
   }
-  }));
+}));
   
 
+app.use('/admin', adminRouter);
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
