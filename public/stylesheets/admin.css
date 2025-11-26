@@ -85,7 +85,6 @@ header{
     }
 
     th,td{
-        font-size:1.2rem;
         border:solid 1px;
         padding:1rem;
     }
@@ -111,17 +110,26 @@ header{
         background-color:aquamarine;
     }
 
+    .edit-col{
+        width:200px;
+    }
+
     .btn{
         text-decoration:none;
         padding:0.3em 0.7em;
         border-radius:6px;
         background-color: var(--primary-background);
-        color:var(    --primary-color);
+        color:var(--primary-color);
         display:inline-block;
+        font-size:0.75rem;
         
         &.btn-borrar{
             background-color:red;
         }
+    }
+
+    form{
+        display:inline-block;
     }
 
 }
