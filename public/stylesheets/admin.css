@@ -153,3 +153,66 @@ table + div.pagination{
 #admin:has(table.page) table + div.pagination{
     display:flex;
 }
+
+form#create-game{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    padding:1rem;
+
+    label{
+        width:100px;
+        display:inline-block;
+    }
+    input,select{
+        padding:10px;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        padding:3px;
+        transition:0.3s;
+        position:relative;
+    }
+
+    div:has(textarea){
+        align-items: flex-start;
+
+        textarea{
+            height:5rem;
+        }
+     }
+
+    div:has(input:focus){
+        box-shadow:0px 0px 4px red;
+        border-radius: 5px;
+        transform: scale(1.1);
+    }
+    
+    div:has(input[required])::after{
+        content :"*";
+        display:block;
+        color:red;
+        font-size:2rem;
+        padding:0.5rem;
+        input{
+            color:red;
+        }
+
+    }
+
+    button[type=submit],input[type=reset]{
+        display:block;
+        width:100%;
+        padding:0.5rem;
+    }
+
+    input[type=reset]{
+        background-color:brown;
+    }
+
+    legend{
+        font-size:1.5rem;
+    }
+}

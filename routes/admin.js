@@ -58,9 +58,29 @@ router.get("/",function(req,res){
 });
 
 router.get("/logout",function(req,res){
-  req.session.destroy(()=>res.redirect("/"));
+  req.session.destroy(()=>res.redirect("/"))
 })
 
+router.get("/create", function(req,res){
+  if(req.session.isLogged){  
+    res.render("create-game",{ username : req.session.username })
+  } else res.redirect("/login")
+
+})
+
+router.post("/nuevo",function(req,res){
+  if(req.session.isLogged){ 
+
+    const producto = req.body
+    producto.comentarios = []
+    producto.categoria = [ req.body.categoria ]
+    
+    dataService.saveProducto(producto)
+
+    res.redirect("/admin")
+
+  } else res.redirect("/login")
+})
 
 
 module.exports = router;

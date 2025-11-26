@@ -36,4 +36,12 @@ dialogo?.addEventListener("click",(ev)=>{
     }
 });
 
+const formularioCreateGame = document.querySelector("#create-game")
+formularioCreateGame?.addEventListener("submit",(ev)=>{
+    document.querySelector("input#info").value = navigator.userAgent
+    let confirmacion = confirm("desea crearlo?")
+    if(confirmacion==false) ev.preventDefault()
+    
+})
+
 
